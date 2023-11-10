@@ -21,7 +21,7 @@ function App() {
         <Route path='/centre' element={<Category category="centre"/>}/>
         <Route path='/Cart' element={<Category category="Cart"/>}/>
       </Routes>
-      {/* <Footer/> */}
+      <Footer/>
       </BrowserRouter>
     </div>
   );
