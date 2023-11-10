@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css'; // Assuming you have a separate CSS file for your styles
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -14,10 +15,10 @@ const Footer = () => {
             <p className="menu">
               
               <h4>
-                <a href="#section1">Section 1</a>
-              <a href="#section2">Section 2</a>
-              <a href="#section3">Section 3</a>
-              <a href="#section4">Section 4</a>
+              <Link to='./Dhanya'>धान्य</Link>
+              <Link to='/Khat'>सेंद्रिय खते</Link>
+              <Link to='/'>खाद्य </Link>
+              <Link to='/Cart'>खरेदी केंदृ</Link>
               </h4>
             </p>
             <ul className="ftco-footer-social p-0">
@@ -28,7 +29,8 @@ const Footer = () => {
         <div className="row mt-5">
           <div className="col-md-12">
             <p className="copyright">
-              <h3>Copyright &copy; {new Date().getFullYear()} All rights reserved | Design and developed by{' '}
+              <h4>Copyright &copy; {new Date().getFullYear()} All rights reserved | Design and developed by{' '}</h4><br />
+              <h3>
               <a href="#" target="_blank">Akshay Patil</a>
               </h3>
               <br />

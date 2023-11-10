@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 import cart from './cart.jpg';
 
 const Navbar = () => {
-    const [menu, setMenu] = useState('');
 
     return (
         <div className="main"> {/* Use "className" instead of "class" */}
@@ -11,20 +11,20 @@ const Navbar = () => {
                 <div className="nav"> {/* Use "className" instead of "class" */}
                     <ul>
                         <li>
-                            <a href='./dhanya.jsx'>धान्य</a> {/* Use "a" for links */}
+                            <Link to='./Dhanya'>धान्य</Link> {/* Use "a" for links */}
                         </li>
                         <li>
-                            <a href='/khat.jsx'>सेंद्रिय खते</a>
+                            <Link to='/Khat'>सेंद्रिय खते</Link>
                         </li>
                         <li>
-                            <a href='/'>खाद्य </a>
+                            <Link to='/'>खाद्य </Link>
                         </li>
                         <li>
-                            <a href='/Cart.jsx'>
+                            <Link to='/Cart'>
                                 <i className='fa fa-shopping-cart'></i> {/* Use "className" */}
                                 <img src={cart} alt="50%" />
                                 <div className="nav-cart-count">0</div>
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </div>

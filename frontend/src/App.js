@@ -2,10 +2,14 @@
 import './App.css';
 import Navbar from './Components/Navbar/Navbar';
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
-import Shop from './Pages/shop'
-import Category from './Pages/Category'
+// import {Khad, Dhanya,Khat,Cart,Center} from './Pages'
+import Khad from './Pages/Khad';
+import Dhanya from './Pages/Dhanya';
+import Khat from './Pages/Khat';
+import Cart from './Pages/Cart'
+import Center from './Pages/Center'
 import Khadya from './Components/Khadya/Khadya';
-import Footer from './Components/Footer/Footer'
+import Footer from './Components/Footer/Footer';
 
 
 function App() {
@@ -13,13 +17,13 @@ function App() {
     <div>
       <BrowserRouter>
       <Navbar/>
-      <Khadya/>
+      {/* <Khadya/> */}
       <Routes>
-        <Route path='/' element={<shop/>}/>
-        <Route path='/dhanya' element={<Category category="dhanya"/>}/>
-        <Route path='/khat' element={<Category category="khat"/>}/>
-        <Route path='/centre' element={<Category category="centre"/>}/>
-        <Route path='/Cart' element={<Category category="Cart"/>}/>
+        <Route path='/' element={<Khad/>}/>
+        <Route path='/Dhanya' element={<Dhanya/>}/>
+        <Route path='/Khat' element={<Khat/>}/>
+        <Route path='/Center' element={<Center/>}/>
+        <Route path='/Cart' element={<Cart/>}/>
       </Routes>
       <Footer/>
       </BrowserRouter>
