@@ -1,20 +1,6 @@
-import agri from './agri.jpg'
-import agri1 from './agri1.jpg'
-import agri2 from './agri2.jpg'
-import agri3 from './agri3.jpg'
-import animal from './animal.jpg'
-import back from './back.jpg'
-import back1 from './back1.jpg'
-import cow from './cow.jpg'
-import cow1 from './cow2.jpg'
-import crop from './crop.jpg'
-import farmer from './farmer@.jpg'
-import farmer2 from './farmer2.jpg'
-import feed from './feed.jpg'
-import food from './food.jpg'
+
 import gasgavat from './gasgavat.jpg'
 import gasgavat2 from './gasgavat2.jpg'
-import goat from './goat.jpg'
 import maize from './maize.jpg'
 import maize1 from './maize1.jpg'
 import maize2 from './maize2.jpg'
@@ -34,8 +20,7 @@ import sugercane4 from './sugercane4.jpg'
 import sugercane5 from './sugercane5.jpg'
 import sugercane6 from './sugercane6.jpg'
 import sugercane7 from './sugercane7.jpg'
-import tree from './tree.jpg'
-import tree1 from './tree1.jpg'
+
 
 let product=[
     {

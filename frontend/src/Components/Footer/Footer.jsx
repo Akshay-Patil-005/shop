@@ -18,7 +18,7 @@ const Footer = () => {
               <Link to='./Dhanya'>धान्य</Link>
               <Link to='/Khat'>सेंद्रिय खते</Link>
               <Link to='/'>खाद्य </Link>
-              <Link to='/Cart'>खरेदी केंदृ</Link>
+              <Link to='/Cart'>खरेदी केंद्र </Link>
               </h4>
             </p>
             <ul className="ftco-footer-social p-0">

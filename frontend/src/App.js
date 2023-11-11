@@ -1,34 +1,57 @@
-
+import React, { useState } from 'react';
 import './App.css';
 import Navbar from './Components/Navbar/Navbar';
-import {BrowserRouter,Routes,Route} from 'react-router-dom';
-// import {Khad, Dhanya,Khat,Cart,Center} from './Pages'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Khad from './Pages/Khad';
 import Dhanya from './Pages/Dhanya';
 import Khat from './Pages/Khat';
-import Cart from './Pages/Cart'
-import Center from './Pages/Center'
-import Khadya from './Components/Khadya/Khadya';
+import Cart from '../src/Components/Cart/Cart';
+import Center from './Pages/Center';
 import Footer from './Components/Footer/Footer';
+// import Product from './Components/Assets/Product'; // Update with the correct path
 
+const App = () => {
+  const [cartItems, setCartItems] = useState([]);
 
-function App() {
+  const addToCart = (product) => {
+    const existingItem = cartItems.find((item) => item.id === product.id);
+
+    if (existingItem) {
+      setCartItems((prevItems) => {
+        return prevItems.map((item) =>
+          item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+        );
+      });
+    } else {
+      setCartItems((prevItems) => [...prevItems, { ...product, quantity: 1 }]);
+    }
+  };
+
+  const removeFromCart = (itemId) => {
+    setCartItems((prevItems) => prevItems.filter((item) => item.id !== itemId));
+  };
+
   return (
     <div>
-      <BrowserRouter>
-      <Navbar/>
-      {/* <Khadya/> */}
-      <Routes>
-        <Route path='/' element={<Khad/>}/>
-        <Route path='/Dhanya' element={<Dhanya/>}/>
-        <Route path='/Khat' element={<Khat/>}/>
-        <Route path='/Center' element={<Center/>}/>
-        <Route path='/Cart' element={<Cart/>}/>
-      </Routes>
-      <Footer/>
-      </BrowserRouter>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Khad />} />
+          <Route path="/Dhanya" element={<Dhanya />} />
+          <Route path="/Khat" element={<Khat />} />
+          <Route
+            path="/Center"
+            element={<Center addToCart={addToCart}  removeFromCart={removeFromCart} />}
+          />
+          <Route
+            path="/Cart"
+            element={<Cart items={cartItems} addToCart={addToCart} removeFromCart={removeFromCart} />}
+          />
+        </Routes>
+        <Footer />
+      </Router>
     </div>
   );
-}
+};
 
 export default App;
